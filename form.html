@@ -37,19 +37,21 @@
                 <fieldset>
                     <legend>로그인</legend>
                     <label for="id">아이디:</label>
-                    <input type="text" id="id" name="id" size="20" placeholder="ID를 입력하십시오."">
+                    <input type="text" id="id" name="id" size="20" placeholder="ID를 입력하십시오." autofocus>
                     <br>
                     <label for="pass">패스워드:</label>
                     <input type="password" id="pass" name="pass" size="20" placeholder="비밀번호를 입력하십시오.">
+                    <br>
+                    <textarea name="textarea" id="" cols="50" rows="10"></textarea>
                     <br>
                     <input type="submit" value="로그인">
                     <input type="reset" value="초기화">
                 </fieldset>
                 Search <input type="search" value="search">
                 <br>
-                URL <input type="url"> <br>
+                URL <input type="url" required> <br>
                 Email <input type="email" name="" id=""> <br>
-                Tel <input type="tel" name="" id=""> <br>
+                Tel <input type="tel" name="" id="" value="000-0000-0000" readonly> <br>
 
 
                 <fieldset>
@@ -63,6 +65,23 @@
                     <label for="py"> <input type="radio" name="gift" id="py" value="yes"> 선물 포장 </label>
                     <label for="pn"> <input type="radio" name="gift" id="pn" value="no"> 선물 포장 안함 </label>
                 </fieldset>
+                Number <input 
+                    type="number" 
+                    name="" 
+                    id="" 
+                    min="0" 
+                    max="10" 
+                    step="2" 
+                    value="1">
+                <br>
+                Date <input type="datetime-local" name="" id="">
+                <input type="time" name="" id="">
+                <br>
+
+                <button>버튼 테스트</button>
+                <input type="button" value="Input/Button">
+                <input type="file" name="file1">
+                <input type="hidden" name="secret" value="password1234">
             </form>
 
     </section>
