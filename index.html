@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>웹 프로그래밍 데모</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Stylish&display=swap');
+    </style>
 </head>
 <body>
     <!-- 메뉴 -->
@@ -24,6 +30,9 @@
                 <li>
                     <a href="form.html">Form</a>
                 </li>
+                <li>
+                    <a href="schedule.html">Schedule</a>
+                </li>
             </ul>
         </div>
     </nav>
@@ -39,6 +48,8 @@
                 <a href="https://developer.mozilla.org/ko/">MDN</a>
             </h3>
 
+            <br>
+
             <p>
                 웹프로그래밍의 3가지 요소:
                 <a href="https://www.w3schools.com/html/default.asp">HTML5</a>
@@ -51,18 +62,20 @@
             <hr />
 
             <p>
-                배경색 바꾸기:
-                <button onclick="pink()">Pink</button>
-                <button onclick="lightblue()">Lightblue</button>
-                <button onclick="yellow()">Yellow</button>
-                <button onclick="linen()">Linen</button>
+                <div class="frame">
+                    배경색 바꾸기:
+                    <button class="changecolor-btn btn-1" onclick="pink()">Pink</button>
+                    <button class="changecolor-btn btn-2" onclick="lightblue()">Lightblue</button>
+                    <button class="changecolor-btn btn-3" onclick="yellow()">Yellow</button>
+                    <button class="changecolor-btn btn-4" onclick="linen()">Linen</button>
+                </div>
             </p>
 
             <p>
                 배워봅시다:
-                <button onmouseover="showhtml()" onmouseout="hide()">HTML5</button>
-                <button onmouseover="showcss()" onmouseout="hide()">CSS3</button>
-                <button onmouseover="showjavascript()" onmouseout="hide()">Javascript</button>
+                <button class="changecolor-btn btn-5" onmouseover="showhtml()" onmouseout="hide()">HTML5</button>
+                <button class="changecolor-btn btn-6" onmouseover="showcss()" onmouseout="hide()">CSS3</button>
+                <button class="changecolor-btn btn-7" onmouseover="showjavascript()" onmouseout="hide()">Javascript</button>
             </p>
 
             <hr />

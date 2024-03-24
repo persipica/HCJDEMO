@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>웹 프로그래밍 데모</title>
+        <link rel="stylesheet" href="style.css" />
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Dongle&display=swap" rel="stylesheet">
+        <style>
+            @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Stylish&display=swap');
+        </style>
+        <style>
+            table, th, td{
+                border: 1px solid;
+                border-collapse: collapse;
+                border-color: #ffffff;
+                color: #ffffff;
+                font-family: 'Dongle', sans-serif;
+                font-size: x-large;
+                text-align: center;
+                border-style: groove;
+            }
+
+            th{
+                background-color: #967E76;
+            }
+
+            td{
+                background-color: #594545;
+            }
+
+            table{
+                background-color: #594545;
+                width: 100%;
+            }
+        </style>
+    </head>
+<body>
+    <!-- 메뉴 -->
+    <nav class="navbar">
+        <div class="container">
+            <div class="logo">WebDemo</div>
+            <ul class="nav">
+                <li>
+                    <a href="index.html">Home</a>
+                </li>
+                <li>
+                    <a href="about.html">About</a>
+                </li>
+                <li>
+                    <a href="contact.html">Contact</a>
+                </li>
+                <li>
+                    <a href="form.html">Form</a>
+                </li>
+                <li>
+                    <a href="schedule.html">Schedule</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 메인 섹션 -->
+    <section class="main">
+        <div class="container">
+            <h1>스케줄</h1>
+            <table>
+                <thead>
+                    <tr>
+                        <th>시간</th><th>MON</th><th>TUE</th><th>WED</th><th>THU</th><th>FRI</th>
+                    </tr>
+                </thead>
+    
+                <tbody>
+                    <tr>
+                        <td>1교시</td><td>&nbsp</td><td rowspan="3">암호수학1</td><td></td><td></td><td rowspan="9">공강</td>
+                    </tr>
+                    <tr>
+                        <td>2교시</td><td></td><td></td>
+                    </tr>
+                    <tr>
+                        <td>3교시</td><td rowspan="2">컴퓨터네트워크</td><td rowspan="2">웹프로그래밍</td><td rowspan="2">컴퓨터네트워크</td>
+                    </tr>
+                    <tr>
+                        <td>4교시</td>
+                    </tr>
+                    <tr>
+                        <td>5교시</td><td colspan="4"></td>
+                    </tr>
+                    <tr>
+                        <td>6교시</td><td rowspan="2">객체지향프로그래밍</td><td rowspan="2">서버구축운영실습</td><td></td><td rowspan="2">서버구축운영실습</td>
+                    </tr>
+                    <tr>
+                        <td>7교시</td><td rowspan="2">Elglish for Global Citizen3</td>
+                    </tr>
+                    <tr>
+                        <td>8교시</td><td></td><td rowspan="2">웹프로그래밍</td><td rowspan="2">객체지향프로그래밍</td>
+                    </tr>
+                    <tr>
+                        <td>9교시</td><td></td>
+                    </tr>
+                </tbody>
+            </table>
+        
+
+          
+
+    </section>
+
+    <script src="main.js">
+
+    </script>
+</body>
+</html>

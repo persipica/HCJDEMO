@@ -1,71 +1,113 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>웹 프로그래밍 데모</title>
     <link rel="stylesheet" href="style.css" />
-</head>
-<body>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dongle&display=swap"
+      rel="stylesheet"
+    />
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Dongle&family=Stylish&display=swap');
+    </style>
+  </head>
+  <body>
     <!-- 메뉴 -->
     <nav class="navbar">
-        <div class="container">
-            <div class="logo">WebDemo</div>
-            <ul class="nav">
-                <li>
-                    <a href="index.html">Home</a>
-                </li>
-                <li>
-                    <a href="about.html">About</a>
-                </li>
-                <li>
-                    <a href="contact.html">Contact</a>
-                </li>
-                <li>
-                    <a href="form.html">Form</a>
-                </li>
-            </ul>
-        </div>
+      <div class="container">
+        <div class="logo">WebDemo</div>
+        <ul class="nav">
+          <li>
+            <a href="index.html">Home</a>
+          </li>
+          <li>
+            <a href="about.html">About</a>
+          </li>
+          <li>
+            <a href="contact.html">Contact</a>
+          </li>
+          <li>
+            <a href="form.html">Form</a>
+          </li>
+          <li>
+            <a href="schedule.html">Schedule</a>
+          </li>
+        </ul>
+      </div>
     </nav>
 
     <!-- 메인 섹션 -->
     <section class="main">
-        <div class="container">
-            <h1>Contact. 연락처</h1>
-            <img src="img/man.jpg" width="200px" alt="사진" />
-
-            <table>
-                <thead>
-                    <tr>
-                        <th>항목</th>
-                        <th>내용</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>전화번호</td>
-                        <td>010-1234-5678</td>
-                    </tr>
-                    <tr>
-                        <td>홈페이지</td>
-                        <td><a href="https://www.joongbu.ac.kr/">joongbu</a></td>
-                    </tr>
-                    <tr>
-                        <td>이메일</td>
-                        <td>aaa@bbb.ccc <br> 
-                            abc@abc.com </td>
-                    </tr>
-                </tbody>
-            </table>
-            <p>전화번호: 010-1234-5678</p>
-            <p>홈페이지: <a href="https://www.joongbu.ac.kr/">joongbu</a>
-            </p>
-            <p>이메일: information@naver.com</p>
+      <div class="container">
+        <h2>Contact. 연락처</h2>
+        <div class="container2">
+          <div class="overlay"></div>
+          <div class="card"></div>
         </div>
+        <p>전화번호: 010-1234-5678</p>
+        <p>홈페이지: <a href="https://www.joongbu.ac.kr/">joongbu</a></p>
+        <p>이메일: information@naver.com</p>
+      </div>
     </section>
 
-    <script src="main.js">
+    <script src="main.js"></script>
+    <script>
+      var container2 = document.querySelector('.container2')
+      var overlay = document.querySelector('.overlay')
+      container2.addEventListener('mousemove', function (e) {
+        var x = e.offsetX
+        var y = e.offsetY
+        var rotateY = (-1 / 5) * x + 20
+        var rotateX = (4 / 30) * y - 20
 
+        overlay.style = `background-position : ${
+          x / 5 + y / 5
+        }%; filter : opacity(${x / 200}) brightness(1.2)`
+
+        container2.style = `transform : perspective(350px) rotateX(${rotateX}deg) rotateY(${rotateY}deg)`
+      })
+
+      container2.addEventListener('mouseout', function () {
+        overlay.style = 'filter : opacity(0)'
+        container2.style =
+          'transform : perspective(350px) rotateY(0deg) rotateX(0deg)'
+      })
     </script>
-</body>
+
+    <style>
+      .container2 {
+        width: 200px;
+        height: 200px;
+        transition: all 0.1s;
+        position: relative;
+      }
+      .overlay {
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        background: linear-gradient(
+          105deg,
+          transparent 40%,
+          rgba(218, 215, 207, 0.8) 45%,
+          rgba(169, 169, 169, 0.6) 50%,
+          transparent 54%
+        );
+        filter: brightness(1.1) opacity(0.8);
+        mix-blend-mode: color-dodge;
+        background-size: 150% 150%;
+        background-position: 100%;
+        transition: all 0.1s;
+      }
+      .card {
+        width: 200px;
+        height: 200px;
+        background-image: url(https://raw.githubusercontent.com/persipica/HCJDEMO/main/img/man.jpg);
+        background-size: cover;
+      }
+    </style>
+  </body>
 </html>
