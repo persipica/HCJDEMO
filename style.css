@@ -462,3 +462,11 @@ button {
 main .container .video {
   position: relative;
 }
+
+#time {
+  background-color: chartreuse;
+  font-size: larger;
+  font-weight: bolder;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
