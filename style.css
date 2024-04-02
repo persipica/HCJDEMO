@@ -57,6 +57,16 @@ ul {
   color: rgb(117, 124, 122);
 }
 
+.navbar a:active {
+  border-bottom: 2px solid;
+  color: rgb(32, 114, 255);
+}
+
+.navbar a:focus {
+  border-bottom: 2px solid;
+  color: rgb(255, 32, 32);
+}
+
 .navbar .logo {
   font-family: 'Stylish', serif;
   font-weight: 600;
